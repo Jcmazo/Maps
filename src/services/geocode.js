@@ -15,14 +15,13 @@ const getGeocode = async (url) => {
         latitude: lat,
         longitude: lng
       }
-
-      res.json(geocodeData)
+      return geocodeData
     } else {
-      throw new Error('No se encontró ninguna ubicación.')
+      throw new Error('No location found.')
     }
   } catch (error) {
-    console.error('Error en la solicitud de geocodificación:', error.message)
-    res.status(500).json({ error: 'Error en la solicitud de geocodificación.' })
+    console.error('Geocoding request failed:', error.message)
+    res.status(500).json({ error: 'Geocoding request failed.' })
   }
 }
 

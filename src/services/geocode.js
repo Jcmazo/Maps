@@ -21,7 +21,7 @@ const getGeocode = async (url) => {
     }
   } catch (error) {
     console.error('Geocoding request failed:', error.message)
-    res.status(500).json({ error: 'Geocoding request failed.' })
+    return { error: 'Geocoding request failed.' }
   }
 }
 

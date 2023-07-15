@@ -1,8 +1,8 @@
 const geocodeController = require('../controllers/geocode')
 
 async function geocodeRoute(app) {
-  app.get('/geocode',geocodeController.getGeocode)
-  app.get('/',(res,req)=>{
+  app.get('/geocode', geocodeController.getGeocode)
+  app.get('/', (req, res) => {
     res.send('Hola mundo')
   })
 }

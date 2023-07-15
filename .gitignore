@@ -40,7 +40,7 @@
 node_modules
 bower_components
 dist
-
+.env
 ################################################
 # Sails.js / Waterline / Grunt
 #
